@@ -65,8 +65,8 @@ const ThirdBody = () => {
                             <div className="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl relative">
                                 <img src="https://s3-alpha-sig.figma.com/img/b842/7ca0/1e20d6b57efa617bac9104366369abf8?Expires=1715558400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Zxg8Svbb6SKEEbb0negsmdBRyPUxTdNrSiJJ86LgbWUyqVrF6sTLXUxJUtwyhG-voL6hKUOnbZ~OA8DNcHgJDQ2lmJkfFW3ImMc7xtfwcJTeCmhzNwuo0c53ZIplKDCl7kFJZFnFaA-gBDHgiElYCFwbD0xncUNkKt32Qc1jFjUW4ataAdhMUJaFIs-wD26PfqXvwULBIGyKDQ48~w1ii9e-z7u1MlvFzu~cE2v3GINuH~QCqsaIWlELig7Y-R~Pqew7nForjrI2rixHSoUTCsz9CoNBUeqk6ikmMuEe2D3kzfZeqJ~~gk-J-ZDfNNfvIP0kRh561ID4vQ9oEhcHXg__" />
                                 <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
-                                    <p className="text-lg">Your Text Here</p>
-                                    <button className="bg-blue-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-blue-600">Button</button>
+                                    
+                                    
                                 </div>
 
                             </div>

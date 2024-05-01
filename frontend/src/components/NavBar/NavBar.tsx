@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
   return (
     <React.Fragment>
       {/* navbar goes here */}
-      <nav className="bg-gray-100 font-semibold border  p-4">
+      <nav className="bg-gray-100 font-semibold border p-4">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
