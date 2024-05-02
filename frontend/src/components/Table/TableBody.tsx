@@ -69,7 +69,6 @@ const api = "https://taskdone-jxtp.onrender.com/api/contact";
 
 
 
-     {loading? (<p>Loading...</p>):(
 
       <div className="relative overflow-x-auto shadow-md">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -98,6 +97,7 @@ const api = "https://taskdone-jxtp.onrender.com/api/contact";
               </th>
             </tr>
           </thead>
+     {loading? (<h1>This data is live on free host site calleed render.com  <br /> so it may take some time to fetch the data. Have a faith.</h1>):(
           <tbody>
 
             {data.map((item: tabledata) => {
@@ -126,13 +126,13 @@ const api = "https://taskdone-jxtp.onrender.com/api/contact";
 
                 </tr>
               )
+            
             })}
-
           </tbody>
+          )}
         </table>
 
       </div>
-    )}
     </React.Fragment>
   );
 };
