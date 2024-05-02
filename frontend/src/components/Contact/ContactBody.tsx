@@ -42,7 +42,7 @@ const ContactBody = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3333/api/contact', {
+      const response = await fetch('https://taskdone-jxtp.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify(formData)

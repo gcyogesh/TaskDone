@@ -3,16 +3,19 @@ import { tabledata } from '../../types/Type';
 
 const TableBody = () => {
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+
 
 
   // for fetching data i mean display 
-const api = "http://localhost:3333/api/contact";
+const api = "https://taskdone-jxtp.onrender.com/api/contact";
   const fetchData = async () => {
     try {
       const response = await fetch(api);
       const result = await response.json();
       setData(result)
+      setLoading(false  )
     } catch (error) {
       console.log(error, "Error getting data from your api")
     }
@@ -42,15 +45,18 @@ const api = "http://localhost:3333/api/contact";
   }
 
 
-
-
+  
+  
   return (
     <React.Fragment>
 
 
-
-
-      <div className="container mx-auto px-4">
+       
+       
+       
+       
+       
+       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center text-center mb-24">
           <div className="w-full lg:w-6/12 px-4">
             <h2 className="text-4xl font-semibold">I have fetched data from database here.</h2>
@@ -63,6 +69,7 @@ const api = "http://localhost:3333/api/contact";
 
 
 
+     {loading? (<p>Loading...</p>):(
 
       <div className="relative overflow-x-auto shadow-md">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -95,16 +102,16 @@ const api = "http://localhost:3333/api/contact";
 
             {data.map((item: tabledata) => {
               const { _id, name, email, phone, getInTouch, message } = item;
-
+              
               return (
-
-
+                
+                
                 <tr key={_id} className="odd:bg-white odd:dark:bg-gray-400 border-b dark:border-gray-700">
                   <td className="px-6 py-4 text-black">{_id}</td>
                   <td
                     scope="row"
                     className="px-6 py-4 font-medium text-black whitespace-nowrap dark:text-black"
-                  >
+                    >
                     {name}
                   </td>
                   <td className="px-6 py-4 text-black">{email}</td>
@@ -123,7 +130,9 @@ const api = "http://localhost:3333/api/contact";
 
           </tbody>
         </table>
+
       </div>
+    )}
     </React.Fragment>
   );
 };

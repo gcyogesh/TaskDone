@@ -52,13 +52,17 @@ export const DeleteThatInfo = async(req, res) => {
     }
 };
 
+
+
+
+
 export const EditThatInfo = async (req,res)=>{
     try{
         const {id} = req.params;
         const {name, email, phone,getInTouch, message} = req.body;
         const updateThatInfo = await ContactModel.findByIdAndUpdate(id,{
             name, email, phone, getInTouch, message
-        })
+        }, {new:true})
 
         if(!updateThatInfo){
             return res.send(404).json({msg:"That information not found ", sucess:false})
@@ -70,3 +74,8 @@ export const EditThatInfo = async (req,res)=>{
         return res.status(500).json({ msg: "Internal server error", success: false });
     }
 }
+
+
+
+
+
